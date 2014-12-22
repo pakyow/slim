@@ -11,11 +11,11 @@ Gem::Specification.new do |s|
   s.description = "A view processor that will convert files under view/ with the .slim extension into html."
   s.authors     = ["Dan McGuire"]
   s.email       = 'dan@metabahn.com'
-  s.homepage    = 'slim-lang.com'
+  s.homepage    = 'http://slim-lang.com'
   s.files        = Dir[
                         File.join(presenter_path, 'README'),
                         File.join(presenter_path, 'VERSION'),
-                        File.join(presenter_path, 'lib','**','*')
+                        File.join(presenter_path, 'lib','*')
                       ]
   s.add_dependency('pakyow-core', '~> 0.9')
   s.add_dependency('pakyow-presenter', '~> 0.9')
