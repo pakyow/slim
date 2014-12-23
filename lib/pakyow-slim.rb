@@ -16,14 +16,6 @@ module SetSlimOptions
 end
 
 Pakyow::App.processor :slim do |content|
-  begin
-    temp = Tempfile.new('foo')
-    temp.write(content)
-    temp.rewind
-    processed_content = Slim::Template.new(temp.path).render
-  ensure
-    temp.close
-    temp.unlink
-  end
-  processed_content
+  processed_content =
+    Slim::Template.new { @data = content }.render
 end
