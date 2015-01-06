@@ -14,10 +14,12 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://slim-lang.com'
   s.files        = Dir[
                         File.join(presenter_path, 'README'),
+                        File.join(presenter_path, 'MIT-LICENSE'),
                         File.join(presenter_path, 'VERSION'),
                         File.join(presenter_path, 'lib','*')
                       ]
   s.add_dependency('pakyow-core', '~> 0.9')
   s.add_dependency('pakyow-presenter', '~> 0.9')
   s.add_dependency('slim', '~> 3.0')
+  s.add_dependency('ruby', '> 2.0')
 end
