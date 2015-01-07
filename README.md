@@ -14,13 +14,13 @@ For more info on slim templating language visit [slim-lang.com](http://slim-lang
 
 ### Pakyow Specific shortcuts:
 
-    .klass@@skope
+`.klass@@skope`
 
 translates to
 
     <div class='klass' data-scope='skope'></div>
 
-    .klass@prop
+and `.klass@prop`
 
 translates to
 
