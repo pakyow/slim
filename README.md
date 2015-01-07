@@ -1,3 +1,7 @@
+# pakyow-slim
+
+Slim templating plugin for [Pakyow](http://pakyow.com).
+
 # Installation
 
 Place inside your Gemfile
@@ -8,11 +12,11 @@ Inside app.rb
 
     require 'pakyow-slim'
 
-Restart your app server and change your view extentions from .html to .slim
+Run `bundle install` and restart your app server. Now any `.slim` views will be compiled for you!
 
 For more info on slim templating language visit [slim-lang.com](http://slim-lang.com/)
 
-### Pakyow Specific shortcuts:
+# Pakyow-Specific shortcuts:
 
 `.klass@@skope`
 
@@ -25,3 +29,11 @@ and `.klass@prop`
 translates to
 
     <div class='klass' data-prop='prop'></div>
+
+# Status
+
+[![Build Status](https://travis-ci.org/pakyow/pakyow-slim.png)](https://travis-ci.org/pakyow/pakyow-slim)
+
+# License
+
+pakyow-slim is released under the [MIT License](http://opensource.org/licenses/MIT).
