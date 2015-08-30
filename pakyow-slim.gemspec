@@ -18,8 +18,11 @@ Gem::Specification.new do |s|
                         File.join(presenter_path, 'VERSION'),
                         File.join(presenter_path, 'lib','*')
                       ]
+
   s.add_dependency('pakyow-core', '~> 0.9')
   s.add_dependency('pakyow-presenter', '~> 0.9')
   s.add_dependency('slim', '~> 3.0')
-  s.add_dependency('ruby', '~> 2.0')
+
+  s.add_development_dependency('rake', '~> 10.4')
+  s.add_development_dependency('minitest', '~> 5.8')
 end
