@@ -1,28 +1,23 @@
-GEM_NAME = 'pakyow-slim'
+require File.expand_path('../lib/version', __FILE__)
 
-version = File.read(File.join(File.expand_path("../VERSION", __FILE__))).strip
-presenter_path = File.exists?(GEM_NAME) ? GEM_NAME : '.'
+Gem::Specification.new do |spec|
+  spec.name          = 'pakyow-slim'
+  spec.summary       = 'Pakyow Slim'
+  spec.description   = 'Slim support for Pakyow views'
+  spec.author        = 'Dan McGuire'
+  spec.email         = 'dan@metabahn.com'
+  spec.homepage      = 'http://pakyow.org'
+  spec.version       = Pakyow::Slim::VERSION
+  spec.require_path  = 'lib'
+  spec.files         = `git ls-files`.split("\n")
+  spec.license       = 'MIT'
 
-Gem::Specification.new do |s|
-  s.name        = 'pakyow-slim'
-  s.version     = version
-  s.licenses    = ['MIT']
-  s.summary     = "Slim processor for Pakyow views."
-  s.description = "A view processor that will convert files under view/ with the .slim extension into html."
-  s.authors     = ["Dan McGuire"]
-  s.email       = 'dan@metabahn.com'
-  s.homepage    = 'http://slim-lang.com'
-  s.files        = Dir[
-                        File.join(presenter_path, 'README'),
-                        File.join(presenter_path, 'MIT-LICENSE'),
-                        File.join(presenter_path, 'VERSION'),
-                        File.join(presenter_path, 'lib','*')
-                      ]
+  spec.add_dependency('pakyow-support', '~> 0')
+  spec.add_dependency('pakyow-core', '~> 0')
+  spec.add_dependency('pakyow-presenter', '~> 0')
 
-  s.add_dependency('pakyow-core', '~> 0.9')
-  s.add_dependency('pakyow-presenter', '~> 0.9')
-  s.add_dependency('slim', '~> 3.0')
+  spec.add_dependency('slim', '~> 3.0')
 
-  s.add_development_dependency('rake', '~> 10.4')
-  s.add_development_dependency('minitest', '~> 5.8')
+  spec.add_development_dependency('rake', '~> 10.4')
+  spec.add_development_dependency('minitest', '~> 5.8')
 end
