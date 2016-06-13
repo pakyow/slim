@@ -1,8 +1,7 @@
 language: ruby
 rvm:
-  - 2.0.0
-  - 2.1.0
-  - ruby-head
+  - 2.2.5
+  - 2.3.1
 notifications:
   email: true
   hipchat: dc38d765431b4f0b3119274f433524@#meta
