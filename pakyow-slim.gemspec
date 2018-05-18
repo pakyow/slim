@@ -1,23 +1,25 @@
-require File.expand_path('../lib/version', __FILE__)
+# frozen_string_literal: true
+
+require File.expand_path("../lib/pakyow/slim/version", __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'pakyow-slim'
-  spec.summary       = 'Pakyow Slim'
-  spec.description   = 'Slim support for Pakyow views'
-  spec.author        = 'Dan McGuire'
-  spec.email         = 'dan@metabahn.com'
-  spec.homepage      = 'http://pakyow.org'
-  spec.version       = Pakyow::Slim::VERSION
-  spec.require_path  = 'lib'
-  spec.files         = `git ls-files`.split("\n")
-  spec.license       = 'MIT'
+  spec.name        = "pakyow-slim"
+  spec.version     = Pakyow::Slim::VERSION
+  spec.summary     = "Pakyow Slim"
+  spec.description = "Slim support for Pakyow Presenter"
 
-  spec.add_dependency('pakyow-support', '>= 0.11')
-  spec.add_dependency('pakyow-core', '>= 0.11')
-  spec.add_dependency('pakyow-presenter', '>= 0.11')
+  spec.authors  = ["Bryan Powell"]
+  spec.email    = "bryan@metabahn.com"
+  spec.homepage = "https://pakyow.org"
 
-  spec.add_dependency('slim', '~> 3.0')
+  spec.required_ruby_version = ">= 2.4.0"
 
-  spec.add_development_dependency('rake', '~> 11.2')
-  spec.add_development_dependency('minitest', '~> 5.8')
+  spec.license = "LGPL-3.0"
+
+  spec.files        = Dir["CHANGELOG.md", "README.md", "LICENSE", "lib/**/*"]
+  spec.require_path = "lib"
+
+  spec.add_dependency "pakyow", "~> 1.0.alpha1"
+
+  spec.add_dependency "slim", "~> 3.0"
 end

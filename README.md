@@ -1,39 +1,7 @@
-# pakyow-slim
+# pakyow/slim
 
-Slim templating plugin for [Pakyow](http://pakyow.com).
+Slim support for [pakyow/presenter](https://github.com/pakyow/pakyow/tree/master/pakyow-presenter).
 
-# Installation
+## Usage
 
-Place inside your Gemfile
-
-    gem 'pakyow-slim'
-
-Inside app.rb
-
-    require 'pakyow-slim'
-
-Run `bundle install` and restart your app server. Now any `.slim` views will be compiled for you!
-
-For more info on slim templating language visit [slim-lang.com](http://slim-lang.com/)
-
-# Pakyow-Specific shortcuts:
-
-`.klass@@skope`
-
-translates to
-
-    <div class='klass' data-scope='skope'></div>
-
-and `.klass@prop`
-
-translates to
-
-    <div class='klass' data-prop='prop'></div>
-
-# Status
-
-[![Build Status](https://travis-ci.org/pakyow/pakyow-slim.png)](https://travis-ci.org/pakyow/pakyow-slim)
-
-# License
-
-pakyow-slim is released under the [MIT License](http://opensource.org/licenses/MIT).
+Add `pakyow-slim` to your `Gemfile`. Any view template with a `slim` file extension will be processed during presentation and rendered as HTML.
