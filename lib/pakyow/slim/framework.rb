@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
-require "slim"
-
 require "pakyow/framework"
+
+require "pakyow/slim/processor"
 
 module Pakyow
   module Slim
     class Framework < Pakyow::Framework(:slim)
       def boot
-        app.processor :slim do |content|
-          ::Slim::Template.new { @data = content }.render
-        end
+        object.state(:processor) << Pakyow::Slim::Processor
       end
     end
   end
