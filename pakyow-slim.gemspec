@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.summary     = "Pakyow Slim"
   spec.description = "Slim support for Pakyow Presenter"
 
-  spec.authors  = ["Bryan Powell"]
-  spec.email    = "bryan@metabahn.com"
-  spec.homepage = "https://pakyow.org"
+  spec.author   = "Bryan Powell"
+  spec.email    = "bryan@bryanp.org"
+  spec.homepage = "https://pakyow.com"
 
   spec.required_ruby_version = ">= 2.5.0"
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files        = Dir["CHANGELOG.md", "README.md", "LICENSE", "lib/**/*"]
   spec.require_path = "lib"
 
-  spec.add_dependency "pakyow-presenter", ">= 1.0.0.rc1"
+  spec.add_dependency "pakyow-presenter", "~> 1.0.0"
 
   spec.add_dependency "slim", "~> 4.0"
 end

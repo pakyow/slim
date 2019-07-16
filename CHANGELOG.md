@@ -1,3 +1,5 @@
-# 1.0.0 / 2015-10-18
+# UNRELEASED
 
-  * Remove version requirement from Pakyow gems
+# 1.0
+
+  * Hello, Web

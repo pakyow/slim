@@ -2,6 +2,6 @@
 
 module Pakyow
   module Slim
-    VERSION = "2.0.0.rc1".freeze
+    VERSION = "2.0.0".freeze
   end
 end
